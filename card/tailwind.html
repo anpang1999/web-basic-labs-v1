@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-sans">
+    <header class="bg-white shadow p-4 sticky top-0 z-10">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">My Portfolio</h1>
+        <nav class="space-x-4">
+          <a href="#about" class="hover:underline">About</a>
+          <a href="#projects" class="hover:underline">Projects</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="hero" class="py-20 bg-blue-100 text-center">
+      <h2 class="text-4xl font-bold mb-4">Hi, I'm a Web Developer</h2>
+      <p class="text-lg">
+        Building responsive, modern websites and applications
+      </p>
+    </section>
+
+    <section id="about" class="py-20 container mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-4">About Me</h3>
+      <p class="max-w-2xl text-lg">
+        I specialize in frontend development with expertise in React, Tailwind
+        CSS, and JavaScript. Passionate about creating clean and user-friendly
+        experiences.
+      </p>
+    </section>
+
+    <section id="projects" class="py-20 bg-gray-100 px-4">
+      <div class="container mx-auto">
+        <h3 class="text-3xl font-semibold mb-8">Projects</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-2xl shadow p-4">
+            <h4 class="text-xl font-bold mb-2">Project One</h4>
+            <p class="text-sm">
+              A React application with authentication and data visualization.
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl shadow p-4">
+            <h4 class="text-xl font-bold mb-2">Project Two</h4>
+            <p class="text-sm">
+              A portfolio site using Tailwind and Alpine.js.
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl shadow p-4">
+            <h4 class="text-xl font-bold mb-2">Project Three</h4>
+            <p class="text-sm">
+              A RESTful API backend using Node.js and Express.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center py-6 bg-white border-t">
+      <p class="text-sm">&copy; 2025 Developer Name. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
