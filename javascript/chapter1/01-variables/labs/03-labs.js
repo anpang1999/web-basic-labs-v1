@@ -14,6 +14,8 @@ let bar = "world";
 // console.log("3. pi:", pi);
 const pi = 3.14;
 
+// 호이스팅 되도록 var pi = 3.14 로 수정
+
 // 문제 4: 다음 코드의 실행 결과를 순서대로 예측해보세요.
 function test() {
   console.log("4. x:", x); // ?

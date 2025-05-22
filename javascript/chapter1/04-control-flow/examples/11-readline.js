@@ -6,6 +6,6 @@ const rl = readline.createInterface({
 });
 
 rl.question("이름을 입력하세요 : ", (name) => {
-    console.log(`안녕하세요, ${name}`);
-    rl.close();
+  console.log(`안녕하세요, ${name}`);
+  rl.close();
 });

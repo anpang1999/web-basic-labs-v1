@@ -18,4 +18,60 @@
 🎉 게임 종료: 당신의 승리입니다!
 
 Math.random() - 난수 생성 함수
-*/ 
+*/
+
+const choices = ["가위", "바위", "보"];
+
+const randomIndex = Math.floor(Math.random() * 3);
+
+const comChoice = choices[randomIndex];
+
+alert(comChoice);
+
+let input;
+let userWinCount = 0;
+let comWinCount = 0;
+let userChoice;
+
+while (userWinCount < 2 && comWinCount < 2) {
+  comChoice = Math.floor(Math.random() * 3);
+  input = prompt("가위, 바위, 보 중 하나를 내세요!");
+  if (input == "가위") {
+    userChoice = 0;
+  } else if (input == "바위") {
+    userChoice = 1;
+  } else if (input == "보") {
+    userChoice = 2;
+  }
+
+  if (comChoice == userChoice) {
+    alert("비겼습니다.");
+    continue;
+  } else if (comChoice == 0 && userChoice == 1) {
+    // 컴퓨터 : 가위 , 유저 : 바위
+    ++userWinCount;
+  } else if (comChoice == 0 && userChoice == 2) {
+    // 컴퓨터 : 가위 , 유저 : 보
+    ++comWinCount;
+  } else if (comChoice == 1 && userChoice == 0) {
+    // 컴퓨터 : 바위 , 유저 : 가위
+    ++userWinCount;
+  } else if (comChoice == 1 && userChoice == 2) {
+    // 컴퓨터 : 바위 , 유저 : 보
+    ++comWinCount;
+  } else if (comChoice == 2 && userChoice == 0) {
+    // 컴퓨터 : 보 , 유저 : 가위
+    ++userWinCount;
+  } else if (comChoice == 2 && userChoice == 1) {
+    // 컴퓨터 : 보 , 유저 : 바위
+    ++comWinCount;
+  }
+}
+
+if (comWinCount == 2) {
+  alert("컴퓨터가 이김");
+}
+
+if (userWinCount == 2) {
+  alert("당신이 이김");
+}

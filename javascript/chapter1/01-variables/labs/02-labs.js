@@ -3,15 +3,13 @@
 // visit() 함수를 여러 번 호출하면 방문자 수가 1씩 증가하도록 만드세요.
 
 function visit() {
-    var visitor = 0;      // Q. 왜 방문자 수가 계속 1일까요?
-    visitor++;
-    console.log("현재 방문자 수:", visitor);
+  var visitor = 0; // Q. 왜 방문자 수가 계속 1일까요?
+  visitor++;
+  console.log("현재 방문자 수:", visitor);
 }
-  
-visit();
-visit();
-visit();
-  
 
-  
-  
+visit();
+visit();
+visit();
+
+// 함수 스코프로 함수 종료시에 메모리에 변수의 값이 사라짐
