@@ -15,11 +15,12 @@
 컴퓨터의 선택: 바위
 당신이 이겼습니다! (2승 0패)
 
-🎉 게임 종료: 당신의 승리입니다!
+게임 종료: 당신의 승리입니다!
 
 Math.random() - 난수 생성 함수
 */
 
+<<<<<<< HEAD
 const choices = ["가위", "바위", "보"];
 
 const randomIndex = Math.floor(Math.random() * 3);
@@ -28,10 +29,18 @@ const comChoice = choices[randomIndex];
 
 alert(comChoice);
 
+=======
+>>>>>>> upstream/main
 let input;
 let userWinCount = 0;
 let comWinCount = 0;
 let userChoice;
+<<<<<<< HEAD
+=======
+let comChoice;
+
+// 0, 1, 2 [가위, 바위, 보]
+>>>>>>> upstream/main
 
 while (userWinCount < 2 && comWinCount < 2) {
   comChoice = Math.floor(Math.random() * 3);
@@ -48,6 +57,7 @@ while (userWinCount < 2 && comWinCount < 2) {
     alert("비겼습니다.");
     continue;
   } else if (comChoice == 0 && userChoice == 1) {
+<<<<<<< HEAD
     // 컴퓨터 : 가위 , 유저 : 바위
     ++userWinCount;
   } else if (comChoice == 0 && userChoice == 2) {
@@ -64,14 +74,34 @@ while (userWinCount < 2 && comWinCount < 2) {
     ++userWinCount;
   } else if (comChoice == 2 && userChoice == 1) {
     // 컴퓨터 : 보 , 유저 : 바위
+=======
+    ++userWinCount;
+  } else if (comChoice == 0 && userChoice == 2) {
+    ++comWinCount;
+  } else if (comChoice == 1 && userChoice == 0) {
+    ++comWinCount;
+  } else if (comChoice == 1 && userChoice == 2) {
+    ++userWinCount;
+  } else if (comChoice == 2 && userChoice == 0) {
+    ++userWinCount;
+  } else if (comChoice == 2 && userChoice == 0) {
+>>>>>>> upstream/main
     ++comWinCount;
   }
 }
 
 if (comWinCount == 2) {
+<<<<<<< HEAD
   alert("컴퓨터가 이김");
 }
 
 if (userWinCount == 2) {
   alert("당신이 이김");
+=======
+  alert("컴퓨터가 이겼음");
+}
+
+if (userWinCount == 2) {
+  alert("당신이 이겼습니다");
+>>>>>>> upstream/main
 }
