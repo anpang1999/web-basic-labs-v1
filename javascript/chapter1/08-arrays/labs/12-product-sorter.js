@@ -9,3 +9,4 @@ const products = [
 ];
 
 // TODO: sort 사용 (price 기준 오름차순)
+console.log(products.tosorted(products.price));
