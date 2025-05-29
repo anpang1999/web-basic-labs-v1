@@ -12,6 +12,14 @@
       // 1. ul에 이벤트 등록
       // 2. 클릭된 버튼이 ❌일 경우
       // 3. 해당 li 요소를 삭제하세요 (remove)
+      document
+        .getElementById("notifications")
+        .addEventListener("click", (event) => {
+          if (event.target.textContent === "❌") {
+            const li = event.target.parentNode;
+            li.remove();
+          }
+        });
     </script>
   </body>
 </html>

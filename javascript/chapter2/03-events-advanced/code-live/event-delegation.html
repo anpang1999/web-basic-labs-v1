@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="outer">
+      <button class="categoryBtn">👕 의류</button>
+      <button class="categoryBtn">👟 신발</button>
+      <button class="categoryBtn">🎒 가방</button>
+    </div>
+    <script>
+      const outer = document.getElementById("outer");
+      outer.addEventListener("click", (e) => {
+        alert(e.target.textContent);
+      }); // 이벤트 위임 방식
+
+      outer.innerHTML += `<button class = "categoryBtn">지갑</button>`; // 동적으로 생성한 요소는 이벤트를 다시 걸어줘야 합니다
+    </script>
+  </body>
+</html>

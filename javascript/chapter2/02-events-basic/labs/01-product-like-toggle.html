@@ -9,6 +9,28 @@
       // TODO: 상품 찜하기 버튼을 누르면 "찜함 ❤️" / "찜취소 🤍"로 텍스트가 바뀌도록 하세요.
       // 버튼 클릭 시 텍스트 토글
       // 🤍 찜하기 → ❤️ 찜함 → 🤍 찜하기 → ...
+      // const likeBtn = document.getElementById("likeBtn");
+
+      // likeBtn.addEventListener("click", () => {
+      //   if (likeBtn.textContent === "🤍 찜하기") {
+      //     likeBtn.textContent = "❤️ 찜함";
+      //   } else {
+      //     likeBtn.textContent = "🤍 찜하기";
+      //   }
+      // });
+      const btn = document.querySelector("#likeBtn");
+
+      btn.addEventListener("click", () => {
+        // 클래스 토글: unliked ↔ liked
+        btn.classList.toggle("liked");
+
+        // 클래스에 따라 텍스트 변경
+        if (btn.classList.contains("liked")) {
+          btn.textContent = "❤️ 찜함";
+        } else {
+          btn.textContent = "🤍 찜하기";
+        }
+      });
     </script>
   </body>
 </html>

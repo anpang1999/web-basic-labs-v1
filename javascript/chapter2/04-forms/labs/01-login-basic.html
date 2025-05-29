@@ -9,6 +9,19 @@
     <p id="msg"></p>
     <script>
       // TODO: submit에서 값 검사, 에러/성공 메시지 DOM에 출력
+      const id = document.getElementById("id");
+      const pw = document.getElementById("pw");
+      const loginForm = document.getElementById("loginForm");
+      const msg = document.getElementById("msg");
+
+      loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const idValue = id.value;
+        const pwValue = pw.value;
+
+        msg.textContent = "에러/성공 메시지";
+      });
     </script>
   </body>
 </html>
